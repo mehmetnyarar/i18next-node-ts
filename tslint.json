@@ -1,0 +1,9 @@
+{
+  "extends": "tslint-config-standard",
+  "rules": {
+    "variable-name": false
+  },
+  "linterOptions": {
+    "exclude": ["node_modules"]
+  }
+}
