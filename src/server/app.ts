@@ -1,8 +1,8 @@
-import * as bodyParser from 'body-parser'
+import bodyParser from 'body-parser'
 import cors from 'cors'
 import express from 'express'
 import i18next from 'i18next' // https://github.com/i18next/i18next/issues/1177
-import * as i18nextMiddleware from 'i18next-express-middleware'
+import i18nextMiddleware from 'i18next-express-middleware'
 import i18nNodeFs from 'i18next-node-fs-backend'
 
 import { CORS_WHITE_LIST } from '@config'
