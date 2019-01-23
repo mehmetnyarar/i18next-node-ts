@@ -4,21 +4,19 @@
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "module": "commonjs",
     "target": "esnext",
     "rootDir": "./src",
     "sourceMap": true,
     "baseUrl": "src",
+    "outDir": "build",
     "paths": {
       "@config/*": ["config/*"],
       "@config": ["config/index"]
     },
-    "lib": [
-      "es2016",
-      "es2017",
-      "esnext"
-    ],
+    "lib": ["es2016", "es2017", "esnext"],
     "resolveJsonModule": true
   }
 }

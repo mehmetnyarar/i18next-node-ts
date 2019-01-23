@@ -1,9 +1,9 @@
-import * as bodyParser from 'body-parser'
-import * as cors from 'cors'
-import * as express from 'express'
+import bodyParser from 'body-parser'
+import cors from 'cors'
+import express from 'express'
 import i18next from 'i18next' // https://github.com/i18next/i18next/issues/1177
-import * as i18nextMiddleware from 'i18next-express-middleware'
-import * as i18nNodeFs from 'i18next-node-fs-backend'
+import i18nextMiddleware from 'i18next-express-middleware'
+import i18nNodeFs from 'i18next-node-fs-backend'
 
 import { CORS_WHITE_LIST } from '@config'
 
@@ -21,12 +21,16 @@ export const corsOptions: cors.CorsOptions = {
 
 // ========= LOCALIZATION
 
-const languageDetector = new i18nextMiddleware.LanguageDetector(null, {
-  order: ['header'],
-  caches: false
-}, {
-  fallbackLng: 'ru'
-})
+const languageDetector = new i18nextMiddleware.LanguageDetector(
+  null,
+  {
+    order: ['header'],
+    caches: false
+  },
+  {
+    fallbackLng: 'ru'
+  }
+)
 const i18nBackend = new i18nNodeFs(null, {
   loadPath: __dirname + '/locales/{{lng}}.json',
   addPath: __dirname + '/locales/missing.json',
